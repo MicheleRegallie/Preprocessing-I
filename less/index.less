@@ -52,11 +52,208 @@ table {
 	border-spacing: 0;
 }
 
+@color: #550000;
+@font-size: 1.2rem;
+@ash: 2rem;
+@font: "Montserrat", sans-serif;
+@contact-color: #550000;
+@font-weight: 600;
+@info: 400;
+@skills: 1.5rem;
+/*media queries*/
+@tablet-down: ~"(max-width: 800px)";
+@phone-down: ~"(max-width: 500px)";
+/*end media queries*/
+/*end variables*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap");
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
+.container {
+  width: 100%;
 
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+  nav a {
+    padding-left: 5%;
+    text-decoration: none;
+    font-family: @font;
+    font-size: @font-size;
+  }
+  a {
+    color: black;
+    &:hover {
+      color: @color;
+      font-weight: @font-weight;
+    }
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+    background-color: @contact-color;
+    color: white;
+    font-family: @font;
+    box-sizing: border-box;
+    @media @phone-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+      line-height: 200%;
+    }
+  }
+  .bio-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    box-sizing: border-box;
+    @media @phone-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+      line-height: 200%;
+    }
+    .name {
+      font-family: @font;
+      font-size: @ash;
+      font-weight: @font-weight;
+    }
+  }
+  .ash-img {
+    border-radius: 50%;
+    height: 20em;
+    width: 20em;
+    padding: 2%;
+    object-fit: cover;
+  }
+  .bio-info2 {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    justify-content: space-between;
+    width: 100%;
+    font-family: @font;
+    font-size: @font-size;
+    text-align: center;
+    line-height: 150%;
+    font-weight: @info;
+    border: 5px solid @color;
+    margin: 5% 10% 0 auto;
+    box-sizing: border-box;
+    @media @phone-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5%;
+      line-height: 200%;
+    }
+    p {
+      width: 60%;
+      padding: 3%;
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    @media @phone-down {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 5%;
+      line-height: 200%;
+    }
+    h2.skills-header {
+      font-family: @font;
+      font-size: @skills;
+      font-weight: @font-weight;
+      text-align: center;
+      padding: 3%;
+      padding-bottom: 5%;
+      margin-bottom: 2%;
+      margin-top: 2%;
+    }
+    .small-header {
+      font-family: @font;
+      font-weight: @font-weight;
+      text-align: center;
+    }
+    p {
+      font-family: @font;
+      font-weight: @info;
+      padding: 1%;
+      line-height: 150%;
+    }
+    .skills-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 2%;
+      width: 60%;
+      text-align: center;
+      @media @phone-down {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5%;
+        line-height: 200%;
+      }
+    }
+    .experience-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 40%;
+      box-sizing: border-box;
+      .small-header; //mixin 1
+      @media @phone-down {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 5%;
+        line-height: 200%;
+      }
+    }
+  }
+
+  footer {
+    .contact-info; //used mixin 2
+    box-sizing: border-box;
+  }
+  @media @phone-down {
+    display: flex;
+    flex-direction: column;
+  }
+}
