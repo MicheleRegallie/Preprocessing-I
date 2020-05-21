@@ -11,17 +11,68 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <!-- What is needed:
+  1. Make a simple resume layout.
+  2. Navigation - 4 links.
+  3. Intro - short elevator pitch.
+  4. Skills 
+  5. Work History
+  6. Contact info
+  7. Variables: Incorporate variables in your project for color and font stacks.
+  8. Nesting: Every selector should be nested inside the main container. Avoid having global styles unless they are element level.
+  9. Mixins: Create 2 mixins of your choosing. Hint: It's super helpful to use flexbox properties in mixins.
+  10. Mobile: Use nested-at rules to provide a mobile version of your resume. Use 500px as a max-width for mobile.
+  -->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="container">
+    <header>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Pokemon Masters</a>
+        <a href="#">Pokedex</a>
+      </nav>
+    </header>
+<div class="column">
+  <section class="side">
+    <div class="side-bar">
+      <h1>Ash Ketchum</h1>
+      <h2>Pokemon Master</h2>
+      <p>ashketchum@gmail.com</p>
+      <p>110-678-9230</p>
+      <p>www.ashketchum.com</p>
+    </div>
+  </section>
+  <section class="bio">
+    <div class="bio-info">
+      <img class="ash-img" src="bannon-morrissy-DfK0HXsfkDY-unsplash.jpg">
+      <h2>Hey! I'm Ash Ketchum.</h2>
+      <p>I have been training to be a Pokemon Master for over 20 years now.</p>
+      <p>But after training for what felt like centuries, I finally made it.</p>
+      <p>If you need someone to help train your wild pokemon, I am your guy!</p>
+    </div>
+  </section>
+  <section class="skills">
+    <div class="experience">
+      <h2>Experience</h2>
+      <h3>Pokedex Corp, Pokemon Trainer</h3>
+      <p> 1999-now </p>
+      <p>I worked with Professor Oak to catch and train wild pokemon.</p>
+    </div>
+    <div class="experience-skills">
+      <h2>Some of the best skills that I use are:</h2>
+      <p>Catching Wild pokemon</p>
+      <p>Pikachu</p>
+      <p>Training wild pokemon with kindness</p>
+      <p>Feeding wild pokemon</p>
+    </div>
+  </section>
 
 
 
-
-
-
-
-  
+</div>
+</div>
 </body>
 </html>
